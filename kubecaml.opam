@@ -1,0 +1,20 @@
+opam-version: "1.2"
+version: "0.1.0"
+maintainer: "Andre Nathan <andre@hostnet.com.br>"
+authors: ["Andre Nathan <andre@hostnet.com.br>"]
+license: "MIT"
+homepage: "https://github.com/andrenth/kubecaml"
+dev-repo: "https://github.com/andrenth/kubecaml.git"
+bug-reports: "https://github.com/andrenth/kubecaml/issues"
+build: [
+  ["jbuilder" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "jbuilder" {build}
+  "cohttp-lwt-unix"
+  "lwt"
+  "ppx_deriving_yojson"
+  "re.pcre"
+  "uri"
+  "yojson"
+]

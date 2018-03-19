@@ -1,0 +1,21 @@
+(jbuild_version 1)
+
+(rule
+ ((targets (swagger.json))
+  (action  (copy ../swagger/swagger.json swagger.json))))
+
+(rule
+ ((targets (kubernetes.ml))
+  (deps    (../gen/gen.exe swagger.json))
+  (action  (with-stdout-to kubernetes.ml (run ${<} swagger.json)))))
+
+(library
+ ((name        kubecaml)
+  (public_name kubecaml)
+  (preprocess  (pps (ppx_deriving ppx_deriving_yojson)))
+  (libraries   (cohttp-lwt-unix
+                uri
+                lwt
+                ppx_deriving_yojson
+                re.pcre
+                yojson))))
