@@ -5,9 +5,9 @@
   (action  (copy ../swagger/swagger.json swagger.json))))
 
 (rule
- ((targets (kubernetes.ml))
+ ((targets (kubecaml.ml))
   (deps    (../gen/gen.exe swagger.json))
-  (action  (with-stdout-to kubernetes.ml (run ${<} swagger.json)))))
+  (action  (with-stdout-to kubecaml.ml (run ${^})))))
 
 (library
  ((name        kubecaml)
@@ -17,5 +17,6 @@
                 uri
                 lwt
                 ppx_deriving_yojson
+                ppx_deriving_yojson.runtime
                 re.pcre
                 yojson))))
