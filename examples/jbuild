@@ -1,0 +1,5 @@
+(jbuild_version 1)
+
+(executable
+ ((name        create_namespace)
+  (libraries   (kubecaml lwt))))
