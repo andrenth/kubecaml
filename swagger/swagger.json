@@ -73938,7 +73938,7 @@
       "type": "string"
      },
      "kind": {
-      "description": "Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds\"",
+      "description": "Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
       "type": "string"
      },
      "name": {
@@ -79553,7 +79553,7 @@
       "type": "string"
      },
      "loadBalancerSourceRanges": {
-      "description": "If specified and supported by the platform, this will restrict traffic through the cloud-provider load-balancer will be restricted to the specified client IPs. This field will be ignored if the cloud-provider does not support the feature.\" More info: https://kubernetes.io/docs/tasks/access-application-cluster/configure-cloud-provider-firewall/",
+      "description": "If specified and supported by the platform, this will restrict traffic through the cloud-provider load-balancer will be restricted to the specified client IPs. This field will be ignored if the cloud-provider does not support the feature. More info: https://kubernetes.io/docs/tasks/access-application-cluster/configure-cloud-provider-firewall/",
       "type": "array",
       "items": {
        "type": "string"
