@@ -1,5 +1,19 @@
 (jbuild_version 1)
 
-(executable
- ((name        create_namespace)
-  (libraries   (kubecaml lwt))))
+(executables
+ ((names
+   (create_namespace
+    delete_namespace
+    list_namespaces
+    read_namespace
+    replace_namespace))
+  (libraries (kubecaml lwt))))
+
+(alias
+ ((name examples)
+  (deps
+   (create_namespace.exe
+    delete_namespace.exe
+    list_namespaces.exe
+    read_namespace.exe
+    replace_namespace.exe))))
