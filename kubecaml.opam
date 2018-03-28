@@ -14,7 +14,7 @@ depends: [
   "cohttp-lwt-unix"     {>= "1.0.2"}
   "lwt"                 {>= "3.3.0"}
   "ppx_deriving_yojson" {>= "3.1"}
-  "re.pcre"             {>= "1.7.3"}
+  "re"                  {>= "1.7.3"}
   "uri"                 {>= "1.9.6"}
   "yojson"              {>= "1.4.1"}
 ]
